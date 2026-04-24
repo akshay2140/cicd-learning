@@ -4,7 +4,7 @@ const app = require("./index");
 test("GET / returns hello message", async () => {
   const res = await request(app).get("/");
   expect(res.statusCode).toBe(200);
-  expect(res.body.message).toBe("Hello from CI/CD!  BROKEN"); // wrong string
+  expect(res.body.message).toBe("Hello from CI/CD!"); // wrong string
 });
 
 test("GET /health returns ok", async () => {
